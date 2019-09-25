@@ -4,9 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "server": "nodemon server.js",
+    "serve": "nodemon server.js",
     "client": "npm start --prefix angular-src",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "start": "concurrently 'npm run serve' 'npm run client'"
   },
   "keywords": [],
   "author": "",

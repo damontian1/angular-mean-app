@@ -8,9 +8,10 @@ export class AuthGuardService implements CanActivate {
 
   constructor(private authService:AuthService, private router:Router, private flashMessage:FlashMessagesService) {}
   canActivate() {
-    if(this.authService.loggedIn()) {
+    if (this.authService.loggedIn()) {
       return true
-    } else {
+    }
+    else {
       this.flashMessage.show("Please log in first", {cssClass: "alert-danger"})
       this.router.navigate(['/login']);
       return false;
